@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
-<head>
-    <title>Index</title>
-
-    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
-</head>
+<head th:replace="fragments/header :: header('index')" />
 
 <body>
+    <div th:replace="fragments/nav :: nav"></div>
     <div class="container" th:each="product : ${products}">
         <div class="col-md-6 banner-left">
             <a href="#"><img src="/images/product-image-77864626_600x.png" alt="" class="img-responsive"/></a>
@@ -62,5 +58,7 @@
         <div class="clearfix"> </div>
     </div>
 </body>
+
+<div th:replace="fragments/footer :: foot"></div>
 
 </html>
