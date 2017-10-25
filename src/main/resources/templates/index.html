@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <title>Title</title>
@@ -10,6 +10,10 @@
     <div th:each="product : ${products}">
         <div th:text="${product.name}"></div>
         <div th:text="${product.price}"></div>
+        <div th:text="${product.description}"></div>
+        <div th:text="${product.fullDescription}"></div>
+        <div th:text="${product.novelty}"></div>
+        <div th:text="${product.category.name}"></div>
     </div>
 </body>
 

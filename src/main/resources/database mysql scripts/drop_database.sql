@@ -1,0 +1,1 @@
+DROP DATABASE IF EXISTS `sad_cloud_shop`;
