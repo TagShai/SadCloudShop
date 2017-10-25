@@ -3,30 +3,39 @@
 	height:32px;
 	display:inline-block;
 }
+
 .color1 span{
 	background:#D2D6D5;
 }
+
 .color2 span{
 	background:#008CB7;
 }
+
 .color3 span{
 	background:#F3349E;
 }
+
 .color4 span{
 	background:#93D52D;
 }
+
 .color5 span{
 	background:#FD9812;
 }
+
 .color6 span{
 	background:#000000;
 }
+
 .color7 span{
 	background:#7800F0;
 }
+
 .color8 span{
 	background:#F6EF04;
 }
+
 .product-colors h3,.prosuct-qty span{
 	color: #08080B;
 	font-weight: 700;
@@ -35,9 +44,11 @@
 	display: block;
 	text-transform: uppercase;
 }
+
 .product-colors li{
 	display:inline-block;
 }
+
 .prosuct-qty select{
 	font-family: 'Open Sans', sans-serif;
 	border: 1px solid #eee;
@@ -45,13 +56,16 @@
 	font-size: 1em;
 	outline:none;
 }
+
 .prosuct-qty option{
 	border:1px solid #EEE;
 	font-family: 'Open Sans', sans-serif;
 }
+
 .prosuct-qty{
 	margin-bottom:1.5em;
 }
+
 .product-colors{
 	padding:0.5em 0;
 }
