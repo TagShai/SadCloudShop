@@ -1,4 +1,5 @@
-<div th:fragment="nav" class="container">
+<div th:fragment="nav" class="container"
+     xmlns:th="http://www.w3.org/1999/xhtml">
     <div class="row">
         <div class="twelve columns">
             <ul class="nav navbar-nav">
@@ -9,6 +10,16 @@
                         <i class="fa fa-shopping-cart">Cart</i>
                     </a>
                 </li>
+                <span th:if="!${#httpServletRequest.remoteUser}">
+                    <li><a type="submit" th:href="@{/login}">Login</a></li>
+                    <li><a type="submit" th:href="@{/registration}">Registration</a></li>
+                </span>
+                <span th:if="${#httpServletRequest.remoteUser}">
+                    <div th:inline="text">Hello, '[[${#httpServletRequest.remoteUser}]]'</div>
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" value="Sign Out" class="btn-danger"/>
+                    </form>
+                </span>
             </ul>
         </div>
     </div>
