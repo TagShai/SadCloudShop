@@ -25,6 +25,9 @@ public class Product extends Entity {
     @Column(name = "full_description")
     private String fullDescription;
 
+    @Column(name = "image")
+    private String image;
+
     @Column(name = "novelty")
     private boolean novelty;
 
@@ -34,7 +37,7 @@ public class Product extends Entity {
 
     public Product() {}
 
-    public Product(Integer id, String name, Double price, String description, String fullDescription, boolean novelty, Category category) {
+    public Product(Integer id, String name, Double price, String description, String fullDescription, boolean novelty, Category category, String image) {
         super(id);
         this.name = name;
         this.price = price;
@@ -42,6 +45,7 @@ public class Product extends Entity {
         this.fullDescription = fullDescription;
         this.novelty = novelty;
         this.category = category;
+        this.image = image;
     }
 
     public String getName() {
@@ -74,6 +78,14 @@ public class Product extends Entity {
 
     public void setFullDescription(String fullDescription) {
         this.fullDescription = fullDescription;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public boolean isNovelty() {

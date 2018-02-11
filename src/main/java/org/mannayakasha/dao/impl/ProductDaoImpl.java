@@ -1,6 +1,7 @@
 package org.mannayakasha.dao.impl;
 
 import org.mannayakasha.dao.interfaces.IProductDao;
+import org.mannayakasha.entity.Category;
 import org.mannayakasha.entity.Product;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,6 +43,7 @@ public class ProductDaoImpl implements IProductDao {
         newProduct.setPrice(product.getPrice());
         newProduct.setDescription(product.getDescription());
         newProduct.setFullDescription(product.getFullDescription());
+        newProduct.setImage(product.getImage());
         newProduct.setNovelty(product.isNovelty());
         newProduct.setCategory(product.getCategory());
         entityManager.flush();
@@ -57,6 +59,13 @@ public class ProductDaoImpl implements IProductDao {
     public List<Product> getAll() {
         String hql = "SELECT product FROM Product as product";
         return (List<Product>) entityManager.createQuery(hql).getResultList();
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public List<Product> getAllWithCategory(String category) {
+        String hql = "SELECT product FROM Product as product WHERE product.category.name = ?";
+        return (List<Product>) entityManager.createQuery(hql).setParameter(1, category).getResultList();
     }
 
     @Override

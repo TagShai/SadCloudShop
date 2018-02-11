@@ -1,5 +1,6 @@
 package org.mannayakasha.service.interfaces;
 
+import org.mannayakasha.entity.Category;
 import org.mannayakasha.entity.Product;
 import org.mannayakasha.service.IService;
 
@@ -15,6 +16,8 @@ import java.util.List;
 public interface IProductService extends IService<Product> {
 
     List<Product> getAll();
+
+    List<Product> getAllWithCategory(String category);
 
     Product getByName(String name);
 }

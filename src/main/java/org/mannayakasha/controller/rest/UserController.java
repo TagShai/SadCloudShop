@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -19,8 +18,10 @@ import java.util.List;
  * @version 1.0 25.10.2017
  */
 
-@Controller
+@RestController
 @RequestMapping("/user")
+//@CrossOrigin(origins = {"http://localhost:8100","file://"})
+@CrossOrigin(origins = "http://localhost:8100")
 public class UserController {
 
     @Autowired

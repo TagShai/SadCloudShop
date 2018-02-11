@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS `products` (
     `price` DOUBLE NOT NULL,
     `description` VARCHAR(100),
     `full_description` TEXT,
+    `image` VARCHAR(255) NOT NULL,
     `novelty` BIT NOT NULL,
     `category_id` INTEGER,
 

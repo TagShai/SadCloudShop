@@ -1,6 +1,7 @@
 package org.mannayakasha.service.impl;
 
 import org.mannayakasha.dao.interfaces.IProductDao;
+import org.mannayakasha.entity.Category;
 import org.mannayakasha.entity.Product;
 import org.mannayakasha.service.interfaces.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +51,9 @@ public class ProductServiceImpl implements IProductService {
     public List<Product> getAll() {
         return productDao.getAll();
     }
+
+    @Override
+    public List<Product> getAllWithCategory(String category) { return productDao.getAllWithCategory(category); }
 
     @Override
     public Product getByName(String name) {
